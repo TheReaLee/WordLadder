@@ -4,32 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D786CC4-BD64-433B-BE63-8E344F86FEEE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>BluePrism.Console</RootNamespace>
-    <AssemblyName>BluePrism.Console</AssemblyName>
+    <ProjectGuid>{D9902766-FF51-4218-957F-2BC2D40D812F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BluePrism.Core</RootNamespace>
+    <AssemblyName>BluePrism.Core</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -39,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -58,29 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Argument.cs" />
+    <Compile Include="Internals\Node.cs" />
+    <Compile Include="Internals\WordLadder.cs" />
+    <Compile Include="Classes\WordLadderExporter.cs" />
+    <Compile Include="Internals\WordLadderExportResult.cs" />
+    <Compile Include="Classes\WordLadderImporter.cs" />
+    <Compile Include="Internals\WordLadderTraversalResult.cs" />
+    <Compile Include="Classes\WordLadderTraverser.cs" />
+    <Compile Include="Exceptions\NoMatchingLengthWordsException.cs" />
+    <Compile Include="Exceptions\WordLengthNotEqualException.cs" />
+    <Compile Include="Extensions\WordLadderExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\INode.cs" />
+    <Compile Include="Interfaces\IWordLadder.cs" />
+    <Compile Include="Interfaces\IWordLadderExporter.cs" />
+    <Compile Include="Interfaces\IWordLadderExportResult.cs" />
+    <Compile Include="Interfaces\IWordLadderImporter.cs" />
+    <Compile Include="Interfaces\IWordLadderTraverser.cs" />
+    <Compile Include="Interfaces\IWordLadderTraversalResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BluePrism.Core\BluePrism.Core.csproj">
-      <Project>{d9902766-ff51-4218-957f-2bc2d40d812f}</Project>
-      <Name>BluePrism.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

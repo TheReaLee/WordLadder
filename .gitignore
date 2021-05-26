@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs/BluePrism/v16/TestStore/0
+/BluePrism.Console/bin
+/BluePrism.Console/obj/Release
+/BluePrism.Console/obj/Debug
+/BluePrism.Core/bin/Debug
+/BluePrism.Core/bin/Release
+/BluePrism.Core/obj
+/BluePrism.Core.Tests/bin
+/BluePrism.Core.Tests/obj
+/packages
